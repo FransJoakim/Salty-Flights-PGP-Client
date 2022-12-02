@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const postBooking = async (data: Booking) => {
   const { data: response } = await axios.post(
-    "https://salty-flights-pgp-server-production.up.railway.app/book",
+    "http://localhost:5500/book",
     data
   );
   return response.data;
