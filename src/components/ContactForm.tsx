@@ -1,4 +1,3 @@
-import { FieldErrorsImpl, FieldValues, UseFormRegister } from "react-hook-form";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { context } from "../ContextProvider";
@@ -10,11 +9,7 @@ export const ContactForm = ({
   step: number;
   setStep: React.Dispatch<React.SetStateAction<number>>;
 }) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { register, handleSubmit } = useForm();
   const {
     booking: {
       contactInfo: { setData },

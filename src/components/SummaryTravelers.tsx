@@ -18,7 +18,7 @@ export const SummaryTravelers = ({ step }: { step: number }) => {
     booking: { passengerInfo, trip },
   } = useContext(context);
 
-  const { mutate, isLoading } = useMutation(postBooking, {
+  const { mutate } = useMutation(postBooking, {
     onSuccess: (data: any) => {
       const message = "success";
       alert(message);

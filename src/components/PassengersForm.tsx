@@ -54,7 +54,7 @@ export const PassengersForm = ({
         {step === 1 && (
           <>
             {proto.map((pasNr) => (
-              <Passenger_N_Form
+              <PassengerNForm
                 pasNr={pasNr}
                 register={register}
                 errors={errors}
@@ -73,7 +73,7 @@ export const PassengersForm = ({
   );
 };
 
-export const Passenger_N_Form = ({
+export const PassengerNForm = ({
   pasNr,
   register,
   errors,

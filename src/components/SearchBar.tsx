@@ -30,12 +30,7 @@ export const useSearch = () => {
 };
 
 export const SearchBar = () => {
-  const {
-    control,
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const { control, register, handleSubmit } = useForm();
   const {
     searchQuery: { httpQuery, setHttpQuery },
     booking: {
@@ -60,7 +55,7 @@ export const SearchBar = () => {
 
   useEffect(() => {
     refetch();
-  }, [httpQuery]);
+  }, [httpQuery, refetch]);
 
   return (
     <div className="w-full h-80 bg-blue-400 flex justify-center items-center">
