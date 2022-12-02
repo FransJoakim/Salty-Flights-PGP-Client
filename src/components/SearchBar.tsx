@@ -12,7 +12,8 @@ const fetchFlights = async ({
   Trip[]
 > => {
   const result = await axios.get(
-    "http://www.localhost:5500/availability" + queryKey[1]
+    "https://salty-flights-pgp-server-production.up.railway.app/availability" +
+      queryKey[1]
   );
   return result.data;
 };
