@@ -12,7 +12,7 @@ const postBooking = async (data: Booking) => {
   return response.data;
 };
 
-export const Summary_Travelers = ({ step }: { step: number }) => {
+export const SummaryTravelers = ({ step }: { step: number }) => {
   const navigate = useNavigate();
   const {
     booking: { passengerInfo, trip },

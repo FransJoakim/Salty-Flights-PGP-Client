@@ -3,7 +3,7 @@ import { context } from "../ContextProvider";
 import { FlightDetails } from "./FlightDetails";
 import { useNavigate } from "react-router-dom";
 
-export const Summary_Trip = ({ step }: { step: number }) => {
+export const SummaryTrip = ({ step }: { step: number }) => {
   const navigate = useNavigate();
   const { booking } = useContext(context);
   const trip = booking.trip.tripData;

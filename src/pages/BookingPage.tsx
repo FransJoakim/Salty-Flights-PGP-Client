@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Summary_Trip } from "../components/Summary_Trip";
+import { SummaryTrip } from "../components/SummaryTrip";
 import { ContactForm } from "../components/ContactForm";
 import { PassengersForm } from "../components/PassengersForm";
-import { Summary_Travelers } from "../components/Summary_Travelers";
+import { SummaryTravelers } from "../components/SummaryTravelers";
 
 export const BookingPage = () => {
   const [step, setStep] = useState<number>(1);
@@ -12,9 +12,9 @@ export const BookingPage = () => {
       <div className="flex mx-2 flex-col w-1/2">
         <PassengersForm step={step} setStep={setStep} />
         <ContactForm step={step} setStep={setStep} />
-        <Summary_Travelers step={step} />
+        <SummaryTravelers step={step} />
       </div>
-      <Summary_Trip step={step} />
+      <SummaryTrip step={step} />
     </div>
   );
 };
