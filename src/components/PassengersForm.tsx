@@ -98,7 +98,6 @@ export const PassengerNForm = ({
             {...register(`${pasNr}_firstName`, { required: true })}
             placeholder="Your favorite airport"
             className="p-2"
-            value="Franz"
           />
         </div>
         <div className="flex flex-col mx-2">
@@ -107,7 +106,6 @@ export const PassengerNForm = ({
             {...register(`${pasNr}_surName`, { required: true })}
             placeholder="Where to?"
             className="p-2"
-            value="Evertsen"
           />
         </div>
         <div className="flex flex-col my-2">

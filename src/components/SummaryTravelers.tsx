@@ -15,7 +15,7 @@ const postBooking = async (data: Booking) => {
 export const SummaryTravelers = ({ step }: { step: number }) => {
   const navigate = useNavigate();
   const {
-    booking: { passengerInfo, trip },
+    booking: { contactInfo, passengerInfo, trip },
   } = useContext(context);
 
   const { mutate } = useMutation(postBooking, {
@@ -42,13 +42,16 @@ export const SummaryTravelers = ({ step }: { step: number }) => {
         <b>Summary</b>
       </h3>
       {step === 3 && (
-        <div className="w-full py-4 flex flex-col">
+        <div className="w-full mt-2 py-4 flex flex-col">
           <b>Passengers</b>
           {passengerInfo.details.map((person) => {
             return (
-              <div>{`${person.firstName} ${person.surName}, ${person.sex}`}</div>
+              <div className="my-2">{`${person.firstName} ${person.surName}, ${person.sex}`}</div>
             );
           })}
+          <b className="mt-4">Contact Information</b>
+          <div className="mt-2">{`Email: ${contactInfo.data?.email}`}</div>
+          <div>{`Phone: ${contactInfo.data?.email}`}</div>
           <button onClick={bookAndConfirm} className={`mt-6 p-4 bg-red-500`}>
             Confirm & Book
           </button>

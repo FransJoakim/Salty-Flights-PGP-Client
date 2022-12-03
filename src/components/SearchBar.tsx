@@ -70,7 +70,6 @@ export const SearchBar = () => {
                 {...register("departure", { required: true })}
                 placeholder="Your favorite airport"
                 className="p-2"
-                value="Oslo"
               />
             </div>
             <Controller
@@ -112,12 +111,13 @@ export const SearchBar = () => {
                 {...register("destination", { required: true })}
                 placeholder="Where to?"
                 className="p-2"
-                value="Amsterdam"
               />
             </div>
             <Controller
               control={control}
               name="returnDate"
+              rules={{ required: !isOneWay }}
+              defaultValue={new Date(2022, 11, 17)}
               render={({ field: { onChange, onBlur, value, ref } }) => (
                 <ReactDatePicker
                   onChange={onChange}

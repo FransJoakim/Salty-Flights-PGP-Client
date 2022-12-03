@@ -28,7 +28,7 @@ export const SummaryTrip = ({ step }: { step: number }) => {
       {trip.return && (
         <FlightDetails flight={trip.return} priceTotal={priceReturn} />
       )}
-      <div className="p-4">
+      <div>
         <b>
           <span>{`In total (X${count}): `}</span>
           {priceDeparture + priceReturn}

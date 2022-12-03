@@ -31,7 +31,7 @@ export const TripListing = (tripListing: Trip) => {
   };
 
   return (
-    <div className="w-3/4 bg-slate-400 flex flex-col p-4 m-6">
+    <div className="w-3/4 bg-slate-400 flex flex-col p-4 px-8 m-6">
       <FlightDetails flight={tripListing.departure} />
       {tripListing.return && <FlightDetails flight={tripListing.return} />}
       <button onClick={goToBooking}>Book</button>

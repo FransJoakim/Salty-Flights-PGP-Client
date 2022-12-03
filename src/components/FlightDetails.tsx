@@ -17,7 +17,7 @@ export const FlightDetails = ({
   } = flight;
 
   return (
-    <div className="w-full flex flex-col p-4">
+    <div className="w-full flex flex-col py-4">
       <div>
         {flight_id} {departureTime.dateString}{" "}
         {arrivalTime.dateString !== departureTime.dateString

@@ -41,7 +41,6 @@ export const ContactForm = ({
                 {...register(`email`, { required: true })}
                 placeholder="Where to?"
                 className="p-2"
-                value="mann@ok.no"
               />
             </div>
             <div className="flex flex-col flex-1">
@@ -50,7 +49,6 @@ export const ContactForm = ({
                 {...register(`phonenr`, { required: true })}
                 placeholder="Your favorite airport"
                 className="p-2"
-                value="12345678"
               />
             </div>
           </div>
