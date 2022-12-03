@@ -12,7 +12,7 @@ const fetchFlights = async ({
   Trip[]
 > => {
   const result = await axios.get(
-    "http://localhost:5500/availability" + queryKey[1]
+    process.env.REACT_APP_SERVER_URL + "/availability" + queryKey[1]
   );
   return result.data;
 };
